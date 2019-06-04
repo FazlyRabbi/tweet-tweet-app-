@@ -86,11 +86,11 @@ itemWrapper.addEventListener("click", e => {
 });
 
 fillterTweet.addEventListener("keyup", e => {
-  const text = e.target.value;
+  const text = e.target.value.toLowerCase();
   let tweetCont = 0;
 
   document.querySelectorAll("#itemWrapper .tweet").forEach(e => {
-    const tweetText = e.firstChild.innerText;
+    const tweetText = e.firstChild.innerText.toLowerCase();
 
     if (tweetText.indexOf(text) === -1) {
       e.style.display = "none";
